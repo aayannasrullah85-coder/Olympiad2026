@@ -1,0 +1,453 @@
+/* Import Google Fonts for a more refined look */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* General Body and Typography */
+body {
+    font-family: 'Open Sans', sans-serif; /* Modern, readable sans-serif for body */
+    line-height: 1.7; /* Slightly increased line height for readability */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark black background */
+    color: #f0f0f0; /* Off-white for general text */
+    overflow-x: hidden;
+    font-size: 17px; /* Increased base font size */
+}
+
+/* Overall container for main content to give it some padding */
+main {
+    padding: 30px; /* Increased padding */
+    max-width: 1200px;
+    margin: 30px auto; /* Increased margin */
+    background-color: #222222; /* Slightly lighter dark background for content boxes */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Stronger, darker shadow for depth */
+    position: relative;
+    z-index: 1;
+}
+
+/* Header with Logo and Navigation */
+header {
+    background: linear-gradient(to right, #000000, #333333); /* Black to dark grey gradient */
+    color: #FFD700; /* Standard Gold for header text */
+    padding: 1.8rem 0; /* More vertical padding */
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 20px 5%; /* Increased padding on sides */
+}
+
+header .logo {
+    font-size: 2.2em; /* Adjusted for image and text balance */
+    font-weight: bold;
+    display: flex; /* Use flexbox to align image and text */
+    align-items: center; /* Vertically center them */
+    font-family: 'Playfair Display', serif; /* Serif font for logo/main title */
+    color: #FFD700; /* Gold for main header title */
+    margin-bottom: 20px; /* Space between logo/title and nav */
+}
+
+.olympiad-symbol {
+    height: 60px; /* Adjust size as needed */
+    margin-right: 15px; /* Space between symbol and text */
+    vertical-align: middle; /* Align with text */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center nav items themselves */
+}
+
+nav ul li {
+    margin: 0 25px; /* More space between nav items */
+}
+
+nav ul li a {
+    color: #FFD700; /* Gold for navigation links */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15em; /* Slightly larger nav links */
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #FFC107; /* Amber Gold on hover */
+    transform: translateY(-3px); /* More pronounced lift */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thicker underline */
+    display: block;
+    margin-top: 6px;
+    right: 0;
+    background: #FFC107; /* Amber Gold for underline */
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #FFC107;
+}
+
+/* Hero Section - Dynamic Background Image */
+.hero {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/sports_bg_main.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 90px 25px; /* More vertical padding */
+    border-radius: 15px;
+    margin-bottom: 50px; /* More space below hero */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 { /* This H1 is only in register.html, but kept for consistency if ever moved */
+    font-size: 4em; /* Significantly larger hero heading */
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Stronger text shadow */
+    color: #FFD700; /* Gold for hero heading */
+    font-family: 'Playfair Display', serif; /* Serif font for hero heading */
+}
+
+.hero p {
+    font-size: 1.6em; /* Larger text for hero paragraph */
+    margin-bottom: 35px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #cccccc;
+}
+
+/* Sections - Card-like appearance for information */
+section {
+    margin-bottom: 40px; /* More space between sections */
+    padding: 35px; /* Increased padding */
+    background-color: #2a2a2a; /* Darker background for sections */
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333; /* Subtle border */
+}
+
+section:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+section h2 {
+    color: #FFD700; /* Gold for section headings */
+    font-size: 2.4em; /* Larger section headings */
+    border-bottom: 4px solid #FFD700; /* Thicker gold underline */
+    padding-bottom: 18px;
+    margin-top: 0;
+    margin-bottom: 30px; /* More space below heading */
+    display: inline-block;
+    font-family: 'Playfair Display', serif; /* Serif font for section headings */
+}
+
+section ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin-top: 20px;
+}
+
+section ul li {
+    background-color: #333333; /* Darker background for list items */
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #DAA520; /* Goldenrod left border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.05em;
+}
+
+section ul li strong {
+    color: #FFD700; /* Gold for strong text in lists */
+    font-size: 1.1em;
+}
+
+/* Specific styling for game overview */
+.games-overview {
+    display: block;
+}
+
+.games-overview h2 {
+    text-align: center;
+}
+
+.games-overview .game-card { /* This might be used if you restructure games-overview */
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+.games-overview .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.games-overview .game-card h3 {
+    color: #DAA520;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+.games-overview .game-card p {
+    font-size: 1.05em;
+    color: #c0c0c0;
+}
+
+/* Buttons - More prominent and action-oriented */
+.button {
+    display: inline-block;
+    background: linear-gradient(to right, #4CAF50, #66bb6a); /* Keeping green for a "go" action, but could be gold */
+    color: white;
+    padding: 14px 32px; /* More padding */
+    border-radius: 35px; /* More pill-shaped */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15em; /* Slightly larger button text */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+    background: linear-gradient(to right, #66bb6a, #81c784);
+    transform: translateY(-4px); /* More pronounced lift */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific button color for primary actions */
+.hero .button, .registration-form-container .button[type="submit"] {
+    background: linear-gradient(to right, #FFD700, #DAA520); /* Gold gradient for primary buttons */
+    color: #222; /* Dark text on gold button */
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+.hero .button:hover, .registration-form-container .button[type="submit"]:hover {
+    background: linear-gradient(to right, #DAA520, #B8860B); /* Darker gold on hover */
+    color: #1a1a1a;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+}
+
+/* Forms (primarily for register.html, but kept for full CSS) */
+.registration-form-container {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 45px;
+    background: #222222;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #FFD700;
+    font-size: 1.1em;
+}
+
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    width: calc(100% - 28px);
+    padding: 14px;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    font-size: 1.1em;
+    background-color: #333333;
+    color: #f0f0f0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Readonly fields */
+input[readonly] {
+    background-color: #444444;
+    cursor: not-allowed;
+    font-weight: bold;
+    color: #FFC107;
+}
+
+/* Contact Section Link */
+.contact a {
+    color: #FFD700; /* Gold for contact email link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+    color: #FFC107;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px; /* More padding */
+    background: #000000; /* Pure black footer */
+    color: #b0b0b0;
+    margin-top: 60px; /* More space above footer */
+    font-size: 0.95em; /* Slightly larger footer text */
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Utility for layout */
+.grid-container { /* This utility class is not used in index.html, but kept in CSS */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 35px;
+    margin-top: 35px;
+}
+
+/* Styling for the confirmation page content (if displayed in new window or div) */
+.confirmation-card { /* This is not used in index.html, but kept for full CSS */
+    background-color: #2a2a2a;
+    border: 1px solid #FFD700;
+    border-radius: 12px;
+    padding: 35px;
+    margin: 35px auto;
+    max-width: 650px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    color: #f0f0f0;
+}
+
+.confirmation-card p {
+    font-size: 1.15em;
+    margin-bottom: 15px;
+}
+
+.confirmation-card p strong {
+    color: #DAA520;
+    width: 200px;
+    display: inline-block;
+}
+
+.confirmation-card h2 {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+}
+
+.print-download-buttons { /* This is not used in index.html, but kept for full CSS */
+    text-align: center;
+    margin-top: 35px;
+}
+
+.print-download-buttons button {
+    margin: 0 18px;
+    padding: 14px 28px;
+    font-size: 1.15em;
+    border-radius: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #222;
+}
+
+.print-download-buttons button.print {
+    background: linear-gradient(to right, #4CAF50, #66bb6a);
+    color: white;
+    border: none;
+}
+
+.print-download-buttons button.print:hover {
+    background: linear-gradient(to right, #66bb6a, #81c784);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(40, 167, 69, 0.4);
+}
+
+.print-download-buttons button.download {
+    background: linear-gradient(to right, #FFD700, #DAA520);
+    color: #222;
+    border: none;
+}
+
+.print-download-buttons button.download:hover {
+    background: linear-gradient(to right, #DAA520, #B8860B);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(255, 215, 0, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    header nav ul {
+        margin-top: 15px;
+    }
+    .hero h1 {
+        font-size: 3em; /* Adjusted for smaller screens */
+    }
+    .hero p {
+        font-size: 1.3em;
+    }
+    main {
+        margin: 10px;
+        padding: 20px;
+    }
+    section {
+        padding: 25px;
+    }
+    section h2 {
+        font-size: 2em; /* Adjusted for smaller screens */
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .registration-form-container {
+        padding: 30px;
+        margin: 20px auto;
+    }
+    body {
+        font-size: 16px; /* Slightly smaller base font size on small screens */
+    }
+    .olympiad-symbol {
+        height: 50px; /* Smaller symbol on small screens */
+        margin-right: 10px;
+    }
+    header .logo {
+        font-size: 1.8em; /* Adjusted for smaller screens */
+        text-align: center; /* Center the logo and text on small screens */
+    }
+    header .logo img {
+        margin-bottom: 10px; /* Add space below image in column layout */
+    }
+    header .logo {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympiad Portal - Registration</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            <img src="/Images/flag-Olympic-Games.webp" alt="Olympiad Symbol" class="olympiad-symbol">
+            Olympiad Registration
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register Now!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="registration-form-container">
+    <h2>Register for the Olympiad</h2>
+    <form id="registrationForm">
+        <!-- 1. Email - First Field -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- 2. Contact -->
+        <div class="form-group">
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+        </div>
+
+        <!-- 3. Age Group -->
+        <div class="form-group">
+            <label for="ageGroup">Age Group:</label>
+            <select id="ageGroup" name="ageGroup" required>
+                <option value="">-- Select Age Group --</option>
+                <option value="junior">Under 12</option>
+                <option value="teen">12 - 17</option>
+                <option value="adult">18+</option>
+            </select>
+        </div>
+
+        <!-- 4. Solo / Dual / Team Games -->
+        <div class="form-group">
+            <label for="participantType">Participation Type:</label>
+            <select id="participantType" name="participantType" required>
+                <option value="">-- Select Type --</option>
+                <option value="solo">Solo</option>
+                <option value="dual">Dual</option>
+                <option value="team">Team</option>
+            </select>
+        </div>
+
+        <!-- 5. Games should appear depending on Solo, Dual, or Team selected -->
+        <div class="form-group" id="gameSelectionGroup" style="display: none;">
+            <label for="gameOption">Select Game:</label>
+            <select id="gameOption" name="gameOption" required>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <!-- Dynamic fields for participants (First Name, Last Name, CNIC, DOB) -->
+        <div id="participantFieldsContainer">
+            <!-- JavaScript will generate fields here, ensure those are also marked required if generated -->
+        </div>
+
+        <div class="form-group">
+            <label for="gameCost">Game Cost:</label>
+            <input type="text" id="gameCost" name="gameCost" value="0" readonly>
+        </div>
+
+        <button type="submit" class="button">Submit Registration</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 Annual Olympiad. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
